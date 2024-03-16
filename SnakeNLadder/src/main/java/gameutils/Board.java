@@ -1,3 +1,5 @@
+package gameutils;
+
 import cell.ICell;
 import cell.LadderHead;
 import cell.SafeCell;
@@ -18,7 +20,7 @@ public class Board {
 
     private ICell boardArray[];
 
-    Board(int n){
+    public Board(int n){
         boardArray=new ICell[n*n];
         isSnakesAdded=false;
         isLaddersAdded=false;
@@ -84,4 +86,17 @@ public class Board {
             System.out.println();
         }
     }
+
+    public ICell getCellType(int i){
+        if(i< boardArray.length && i >= 0)
+            return boardArray[i];
+        else
+            return null;
+    }
+
+    public int getWinningIndex(){
+        return boardArray.length-1;
+    }
+
+
 }

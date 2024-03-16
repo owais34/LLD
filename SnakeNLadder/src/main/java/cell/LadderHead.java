@@ -7,9 +7,13 @@ public class LadderHead implements ICell{
         this.targetLocation=targetLocation;
     }
 
-    @Override
     public int goTo() {
         return targetLocation;
+    }
+
+
+    public void printMessage() {
+        System.out.println("Yes!! Ladder");
     }
 
     public String toString(){

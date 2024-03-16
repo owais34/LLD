@@ -6,9 +6,14 @@ public class SnakeHead implements ICell{
     public SnakeHead(int targetLocation){
         this.targetLocation=targetLocation;
     }
-    @Override
+
     public int goTo() {
         return targetLocation;
+    }
+
+
+    public void printMessage() {
+        System.out.println("No!! Snake");
     }
 
     public String toString(){

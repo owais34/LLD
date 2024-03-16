@@ -6,9 +6,14 @@ public class SafeCell implements ICell{
     public SafeCell(int targetLocation){
         this.targetLocation=targetLocation;
     }
-    @Override
+
     public int goTo() {
         return targetLocation;
+    }
+
+
+    public void printMessage() {
+        System.out.println("Safe here");
     }
 
     public String toString(){
